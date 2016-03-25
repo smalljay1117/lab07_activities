@@ -41,4 +41,8 @@ public class ColorPickerActivity extends AppCompatActivity {
         finish();
     }
 
+    public void cancel(View view) {
+        setResult(RESULT_CANCELED);
+        finish();
+    }
 }

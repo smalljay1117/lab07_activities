@@ -18,7 +18,8 @@
         <activity android:name=".ColorPickerActivity" />
         <activity android:name=".NextActivity" />
         <activity android:name=".BackNextActivity" />
-        <activity android:name=".BackMainActivity"></activity>
+        <activity android:name=".BackMainActivity" />
+        <activity android:name=".EditTextActivity"></activity>
     </application>
 
 </manifest>
