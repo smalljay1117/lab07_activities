@@ -14,10 +14,20 @@ public class BackNextActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_back_next);
+        init();
+    }
 
-        tvNext = (TextView)findViewById(R.id.tv_next);
-        color = getIntent().getIntExtra(ColorPickerActivity.BUNDLE_KEY_COLOR_INT, 0);
+    private void init() {
+        setContentView(R.layout.activity_back_next);
+        initBackgroundColor();
+    }
+
+    private void initBackgroundColor() {
+        tvNext = (TextView)findViewById(R.id.tv_next_activity_message);
+        color = getIntent().getIntExtra(ColorPickerActivity.BUNDLE_KEY_COLOR_INT, -1);
+        if (color == -1) {
+            return;
+        }
         tvNext.setBackgroundColor(color);
     }
 

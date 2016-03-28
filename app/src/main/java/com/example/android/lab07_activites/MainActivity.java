@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int SELECT_COLOR_REQUEST = 0;
     private static final int EDIT_TEXT_REQUEST = 1;
-    private int colorInt;
+    private int colorInt = 0xFFFFFFFF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

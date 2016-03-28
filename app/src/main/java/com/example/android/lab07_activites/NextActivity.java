@@ -15,9 +15,19 @@ public class NextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
+        init();
+    }
 
-        tvNext = (TextView)findViewById(R.id.tv_next);
-        color = getIntent().getIntExtra(ColorPickerActivity.BUNDLE_KEY_COLOR_INT, 0);
+    private void init() {
+        tvNext = (TextView) findViewById(R.id.tv_main_activity_message);
+        initBackgroundColor();
+    }
+
+    private void initBackgroundColor() {
+        color = getIntent().getIntExtra(ColorPickerActivity.BUNDLE_KEY_COLOR_INT, -1);
+        if (color == -1) {
+            return;
+        }
         tvNext.setBackgroundColor(color);
     }
 
